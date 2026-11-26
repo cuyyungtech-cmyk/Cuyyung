@@ -2,157 +2,418 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Kejutan Cinta Untuk Nurul Ezlynn</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kejutan Untuk Nurul Ezlynn</title>
   <style>
-    :root {
-      --neon-pink: #ff1e8a;
-      --neon-pink-soft: #ff6ec4;
-      --neon-glow: 0 0 18px rgba(255, 30, 138, 0.85), 0 0 42px rgba(255, 30, 138, 0.55);
-      --bg-dark: #09050d;
-      --glass-bg: rgba(255, 255, 255, 0.08);
-      --glass-border: rgba(255, 255, 255, 0.28);
-      --text-main: #ffffff;
-      --text-muted: #f3d6e8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at top, #24091d 0%, var(--bg-dark) 70%);
-      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #2a0920 0%, #09050d 75%);
+      color: #ffffff;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* ================= HALAMAN 1: KACA HATI NEON PINK ================= */
+    /* HALAMAN 1: KACA HATI NEON PINK */
     #page1 {
-      position: fixed;
-      inset: 0;
-      z-index: 50;
+      min-height: 100vh;
+      padding: 32px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 36px 22px 32px;
-      background: radial-gradient(circle at 50% 30%, rgba(255, 30, 138, 0.16), transparent 60%), var(--bg-dark);
-      transition: filter 0.85s ease, opacity 0.85s ease, transform 0.85s ease;
+      transition: filter 0.7s ease, opacity 0.7s ease;
     }
-
-    #page1.blur-exit {
-      filter: blur(26px);
+    #page1.hide-blur {
+      filter: blur(22px);
       opacity: 0;
-      transform: scale(1.08);
-      pointer-events: none;
+      display: none;
     }
 
-    .top-badge {
+    .badge {
       font-size: 0.78rem;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--neon-pink-soft);
-      background: rgba(255, 30, 138, 0.12);
-      border: 1px solid rgba(255, 30, 138, 0.35);
+      color: #ff8ad4;
+      background: rgba(255, 30, 138, 0.14);
+      border: 1px solid rgba(255, 110, 196, 0.4);
       padding: 7px 16px;
       border-radius: 999px;
-      box-shadow: 0 0 16px rgba(255, 30, 138, 0.25);
     }
 
-    .heart-stage {
-      position: relative;
+    .heart-box {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin: auto 0;
+      gap: 12px;
+      margin: 24px 0;
     }
 
-    .heart-glass-wrapper {
-      position: relative;
-      width: 240px;
-      height: 225px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      filter: drop-shadow(0 0 24px rgba(255, 30, 138, 0.45));
-    }
-
-    .heart-svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    .heart-glass-shell {
-      fill: rgba(255, 255, 255, 0.06);
-      stroke: rgba(255, 255, 255, 0.55);
-      stroke-width: 2.5;
-    }
-
-    .heart-glass-highlight {
-      fill: none;
-      stroke: rgba(255, 255, 255, 0.38);
-      stroke-width: 2;
-      stroke-linecap: round;
-    }
-
-    .neon-water-rect {
-      fill: url(#neonPinkGrad);
-      transition: y 0.08s linear;
-    }
-
-    .water-wave-line {
-      stroke: #ff9be2;
-      stroke-width: 2.2;
-      fill: none;
-      opacity: 0.85;
-    }
-
-    .fill-percent {
+    .pct-text {
       font-size: 1.5rem;
       font-weight: 800;
-      color: #ffffff;
-      text-shadow: var(--neon-glow);
-      letter-spacing: 1px;
+      color: #ff77cb;
+      text-shadow: 0 0 18px rgba(255, 30, 138, 0.8);
     }
 
-    .hint-text {
+    .sub-text {
       font-size: 0.92rem;
-      color: var(--text-muted);
+      color: #f3d6e8;
       text-align: center;
-      max-width: 290px;
-      line-height: 1.45;
+      max-width: 280px;
     }
 
-    /* Butang Leret Untuk Membuka */
-    .slider-container {
+    .slider-wrap {
       width: 100%;
-      max-width: 360px;
-      height: 62px;
-      background: var(--glass-bg);
-      border: 1.5px solid var(--glass-border);
+      max-width: 350px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
       border-radius: 999px;
+      padding: 5px;
       position: relative;
       display: flex;
       align-items: center;
-      padding: 5px;
-      backdrop-filter: blur(14px);
-      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.05), 0 10px 28px rgba(0, 0, 0, 0.45);
-      user-select: none;
       touch-action: none;
+      user-select: none;
     }
 
-    .slider-progress {
+    .slider-knob {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ff66c4, #ff1e8a);
+      box-shadow: 0 0 20px rgba(255, 30, 138, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .slider-text {
       position: absolute;
-      left: 0;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 36px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #fff;
+      pointer-events: none;
+    }
+
+    /* HALAMAN 2: UCAPAN SWEET */
+    #page2 {
+      display: none;
+      padding: 26px 18px 80px;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeUp 0.75s ease;
+    }
+    #page2.show {
+      display: flex;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; filter: blur(12px); transform: translateY(16px); }
+      to { opacity: 1; filter: blur(0); transform: translateY(0); }
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 110, 196, 0.35);
+      border-radius: 24px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+
+    .img-box {
+      width: 100%;
+      aspect-ratio: 4 / 4.2;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 110, 196, 0.6);
+      margin: 14px 0;
+      background: #1a0815;
+    }
+
+    .img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .title-pink {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ff8ad4;
+      margin-bottom: 10px;
+    }
+
+    .msg-box {
+      text-align: left;
+      font-size: 0.96rem;
+      line-height: 1.7;
+      color: #fae8f4;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 14px;
+      border-radius: 14px;
+      border-left: 3px solid #ff1e8a;
+    }
+
+    .msg-box p + p {
+      margin-top: 10px;
+    }
+
+    .warn-box {
+      margin-top: 20px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px dashed rgba(255, 210, 90, 0.6);
+      background: rgba(255, 190, 20, 0.1);
+      color: #ffe28a;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .spacer {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.8rem;
+      padding-bottom: 14px;
+    }
+
+    #btnSaingan {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.45s ease;
+      background: linear-gradient(135deg, #ff1e8a, #ff7b00);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      padding: 15px 32px;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      box-shadow: 0 0 24px rgba(255, 30, 138, 0.75);
+    }
+
+    #btnSaingan.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    #bebongBox {
+      display: none;
+      width: 100%;
+      max-width: 420px;
+      margin-top: 20px;
+      background: rgba(255, 123, 0, 0.12);
+      border: 1.5px solid rgba(255, 175, 80, 0.6);
+      border-radius: 24px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    #bebongBox.open {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="page1">
+    <div class="badge">Kejutan Khas Untukmu</div>
+
+    <div class="heart-box">
+      <svg width="210" height="195" viewBox="0 0 240 220">
+        <defs>
+          <clipPath id="clipHeart">
+            <path d="M120 205 C120 205 18 136 18 66 C18 32 45 10 76 10 C96 10 112 20 120 35 C128 20 144 10 164 10 C195 10 222 32 222 66 C222 136 120 205 120 205 Z" />
+          </clipPath>
+          <linearGradient id="pinkFill" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ff85d0" />
+            <stop offset="50%" stop-color="#ff1e8a" />
+            <stop offset="100%" stop-color="#b80058" />
+          </linearGradient>
+        </defs>
+
+        <path fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"
+              d="M120 205 C120 205 18 136 18 66 C18 32 45 10 76 10 C96 10 112 20 120 35 C128 20 144 10 164 10 C195 10 222 32 222 66 C222 136 120 205 120 205 Z" />
+
+        <g clip-path="url(#clipHeart)">
+          <rect id="pinkWater" x="0" y="212" width="240" height="220" fill="url(#pinkFill)" />
+        </g>
+
+        <path fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="2.5"
+              d="M120 205 C120 205 18 136 18 66 C18 32 45 10 76 10 C96 10 112 20 120 35 C128 20 144 10 164 10 C195 10 222 32 222 66 C222 136 120 205 120 205 Z" />
+      </svg>
+
+      <div class="pct-text" id="pctText">0%</div>
+      <p class="sub-text">Leret ke kanan untuk penuhkan hati kaca ini dengan cinta neon pink.</p>
+    </div>
+
+    <div class="slider-wrap" id="sliderWrap">
+      <div class="slider-knob" id="sliderKnob">➜</div>
+      <div class="slider-text">LERET UNTUK MEMBUKA</div>
+    </div>
+  </section>
+
+  <main id="page2">
+    <div class="card">
+      <div class="badge">Untuk Isteriku · Nurul Ezlynn</div>
+
+      <div class="img-box">
+        <img src="./ISTERI.jpg" alt="Nurul Ezlynn" />
+      </div>
+
+      <div class="title-pink">Nurul Ezlynn, Segalanya Buatku 💖</div>
+
+      <div class="msg-box">
+        <p>
+          Sayangku <strong>Nurul Ezlynn</strong>, terima kasih kerana sentiasa menjadi tempat paling tenang dan bahagia dalam hidup saya. Senyuman awak sentiasa mengubat lelah setiap hari.
+        </p>
+        <p>
+          Cinta saya untuk awak tak pernah pudar—malah makin hari makin kuat, seterang cahaya neon pink dalam hati kaca tadi. Semoga kita terus berkasih sayang sampai ke syurga.
+        </p>
+      </div>
+
+      <div class="warn-box">
+        ⚠️ JANGAN SCROLL BAWAH! Ada sesuatu yang cuba kacau daun...
+      </div>
+    </div>
+
+    <div class="spacer">...jangan scroll bawah...</div>
+
+    <button id="btnSaingan" type="button">SAINGAN MU</button>
+
+    <div id="bebongBox">
+      <div class="badge" style="color:#ffb75c; border-color:rgba(255,175,80,0.6); background:rgba(255,123,0,0.18);">
+        🚨 Saingan Terkuat Muncul!
+      </div>
+      <div class="img-box" style="border-color:rgba(255,175,80,0.7);">
+        <img src="./BEBONG.jpg" alt="Bebong" />
+      </div>
+      <p style="font-size:1rem; line-height:1.65; color:#fff2de; font-weight:600;">
+        “Mamakk! Tengok ni <strong>BEBONG</strong> pun ada hak rampas perhatian! Mamak jangan perasan sorang-sorang tau! 😎🍼💕”
+      </p>
+    </div>
+  </main>
+
+  <script>
+    const wrap = document.getElementById("sliderWrap");
+    const knob = document.getElementById("sliderKnob");
+    const water = document.getElementById("pinkWater");
+    const pctText = document.getElementById("pctText");
+    const page1 = document.getElementById("page1");
+    const page2 = document.getElementById("page2");
+    const btnSaingan = document.getElementById("btnSaingan");
+    const bebongBox = document.getElementById("bebongBox");
+
+    let dragging = false;
+    let unlocked = false;
+    let startX = 0;
+    let curX = 0;
+
+    function maxMove() {
+      return wrap.clientWidth - knob.clientWidth - 10;
+    }
+
+    function applyMove(px) {
+      const max = maxMove();
+      const pos = Math.max(0, Math.min(max, px));
+      const ratio = max > 0 ? pos / max : 0;
+
+      knob.style.transform = `translateX(${pos}px)`;
+      pctText.textContent = Math.round(ratio * 100) + "%";
+      water.setAttribute("y", (212 - ratio * 206).toFixed(1));
+
+      if (ratio >= 0.95 && !unlocked) {
+        unlocked = true;
+        dragging = false;
+        knob.style.transform = `translateX(${max}px)`;
+        pctText.textContent = "100%";
+        water.setAttribute("y", "6");
+
+        setTimeout(() => {
+          page1.classList.add("hide-blur");
+          page2.classList.add("show");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 250);
+      }
+    }
+
+    function getX(e) {
+      return e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX;
+    }
+
+    knob.addEventListener("touchstart", (e) => {
+      if (unlocked) return;
+      dragging = true;
+      startX = getX(e) - curX;
+    }, { passive: true });
+
+    window.addEventListener("touchmove", (e) => {
+      if (!dragging || unlocked) return;
+      curX = Math.max(0, Math.min(maxMove(), getX(e) - startX));
+      applyMove(curX);
+    }, { passive: true });
+
+    window.addEventListener("touchend", () => {
+      if (!dragging || unlocked) return;
+      dragging = false;
+      if (curX < maxMove() * 0.95) {
+        curX = 0;
+        applyMove(0);
+      }
+    });
+
+    knob.addEventListener("mousedown", (e) => {
+      if (unlocked) return;
+      dragging = true;
+      startX = e.clientX - curX;
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (!dragging || unlocked) return;
+      curX = Math.max(0, Math.min(maxMove(), e.clientX - startX));
+      applyMove(curX);
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (!dragging || unlocked) return;
+      dragging = false;
+      if (curX < maxMove() * 0.95) {
+        curX = 0;
+        applyMove(0);
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      if (!unlocked) return;
+      if (document.documentElement.scrollHeight - (window.scrollY + window.innerHeight) < 180) {
+        btnSaingan.classList.add("visible");
+      }
+    }, { passive: true });
+
+    btnSaingan.addEventListener("click", () => {
+      bebongBox.classList.add("open");
+      bebongBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+</body>
+</html>
