@@ -1,966 +1,158 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Kejutan Istimewa Untuk Nurul Ezlynn ❤️</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display, Dancing Script & Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --neon-pink: #ff007f;
-            --neon-glow: #ff4da6;
-            --soft-pink: #ff85c0;
-            --bg-dark: #0a0307;
-        }
-
-        * {
-            box-sizing: border-box;
-            -webkit-tap-highlight-color: transparent;
-            user-select: none;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        .font-serif-romantic {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .font-script {
-            font-family: 'Dancing Script', cursive;
-        }
-
-        /* Latar Belakang Bercahaya Neon Pink Gelap */
-        .ambient-bg {
-            position: fixed;
-            inset: 0;
-            background: 
-                radial-gradient(circle at 18% 18%, rgba(255, 0, 127, 0.22) 0%, transparent 45%),
-                radial-gradient(circle at 82% 82%, rgba(214, 51, 132, 0.18) 0%, transparent 50%),
-                linear-gradient(180deg, #070205 0%, #16050e 50%, #0a0206 100%);
-            z-index: -2;
-        }
-
-        /* Zarah Cahaya Terapung */
-        .particle {
-            position: fixed;
-            border-radius: 50%;
-            background: radial-gradient(circle, #ff4da6, transparent);
-            pointer-events: none;
-            z-index: -1;
-            animation: floatUp linear infinite;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(105vh) scale(0.5); opacity: 0; }
-            20% { opacity: 0.75; }
-            80% { opacity: 0.75; }
-            100% { transform: translateY(-10vh) scale(1.25); opacity: 0; }
-        }
-
-        /* =========================================
-           HALAMAN 1: KACA LOVE & SLIDE TO UNLOCK
-           ========================================= */
-        #page-1 {
-            position: fixed;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            z-index: 30;
-            transition: filter 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                        opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
-                        transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Transisi Kabur (Blur Out) apabila dibuka */
-        #page-1.blur-unlock {
-            filter: blur(26px);
-            opacity: 0;
-            transform: scale(1.16);
-            pointer-events: none;
-        }
-
-        /* Bekas Kaca Bentuk Hati */
-        .glass-heart-container {
-            position: relative;
-            width: 265px;
-            height: 245px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            filter: drop-shadow(0 0 28px rgba(255, 0, 127, 0.4));
-            transition: filter 0.3s ease, transform 0.3s ease;
-        }
-
-        .glass-heart-container.full-glow {
-            filter: drop-shadow(0 0 48px rgba(255, 0, 127, 0.95)) drop-shadow(0 0 85px rgba(255, 77, 166, 0.85));
-            transform: scale(1.06);
-        }
-
-        /* Animasi Ombak Air Neon Pink */
-        .liquid-wave-1 {
-            animation: waveMove1 2.8s linear infinite;
-        }
-        .liquid-wave-2 {
-            animation: waveMove2 4.2s linear infinite;
-            opacity: 0.65;
-        }
-
-        @keyframes waveMove1 {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100px); }
-        }
-
-        @keyframes waveMove2 {
-            0% { transform: translateX(-100px); }
-            100% { transform: translateX(0); }
-        }
-
-        /* Buih-buih halus dalam air neon */
-        .bubble {
-            animation: bubbleRise 2.4s ease-in infinite;
-        }
-        @keyframes bubbleRise {
-            0% { transform: translateY(0) scale(0.8); opacity: 0; }
-            40% { opacity: 0.9; }
-            100% { transform: translateY(-95px) scale(1.3); opacity: 0; }
-        }
-
-        /* Bar Leret (Slide to Unlock) */
-        .slider-track {
-            position: relative;
-            width: 100%;
-            max-width: 330px;
-            height: 64px;
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 77, 166, 0.4);
-            border-radius: 9999px;
-            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.55), 0 0 24px rgba(255, 0, 127, 0.25);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            padding: 5px;
-        }
-
-        .slider-fill {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 0%;
-            background: linear-gradient(90deg, rgba(255, 0, 127, 0.28), rgba(255, 42, 133, 0.65));
-            border-radius: 9999px;
-            pointer-events: none;
-        }
-
-        .slider-text {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-left: 42px;
-            font-size: 0.78rem;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            pointer-events: none;
-            background: linear-gradient(90deg, #ff85c0 0%, #ffffff 50%, #ff85c0 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmerText 2.6s linear infinite;
-        }
-
-        @keyframes shimmerText {
-            0% { background-position: 200% center; }
-            100% { background-position: -200% center; }
-        }
-
-        .slider-thumb {
-            position: relative;
-            z-index: 10;
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ff007f, #ff5ca8);
-            box-shadow: 0 0 20px rgba(255, 0, 127, 0.9), inset 0 2px 5px rgba(255, 255, 255, 0.65);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: grab;
-            touch-action: none;
-        }
-
-        .slider-thumb:active {
-            cursor: grabbing;
-            transform: scale(0.95);
-        }
-
-        /* =========================================
-           HALAMAN 2: UCAPAN NURUL EZLYNN & KEJUTAN BEBONG
-           ========================================= */
-        #page-2 {
-            opacity: 0;
-            filter: blur(22px);
-            transform: scale(0.96);
-            pointer-events: none;
-            transition: filter 1.3s cubic-bezier(0.22, 1, 0.36, 1), 
-                        opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1), 
-                        transform 1.3s cubic-bezier(0.22, 1, 0.36, 1);
-            min-height: 150vh; /* Ruang skrol ke bawah */
-            padding-bottom: 6rem;
-        }
-
-        #page-2.revealed {
-            opacity: 1;
-            filter: blur(0px);
-            transform: scale(1);
-            pointer-events: auto;
-        }
-
-        .romantic-card {
-            background: rgba(255, 255, 255, 0.055);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 133, 192, 0.28);
-            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.65), 0 0 35px rgba(255, 0, 127, 0.16);
-        }
-
-        .photo-frame {
-            position: relative;
-            border-radius: 1.5rem;
-            padding: 6px;
-            background: linear-gradient(135deg, #ff007f, #ffb3d9, #ff2a85);
-            box-shadow: 0 12px 32px rgba(255, 0, 127, 0.4);
-        }
-
-        /* Butang Saingan Mu yang timbul bila skrol */
-        #rival-btn-wrapper {
-            opacity: 0;
-            transform: translateY(35px) scale(0.9);
-            pointer-events: none;
-            transition: all 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        #rival-btn-wrapper.visible {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-            pointer-events: auto;
-        }
-
-        .rival-btn {
-            background: linear-gradient(135deg, #ff007f 0%, #ff5e00 100%);
-            box-shadow: 0 10px 30px rgba(255, 0, 127, 0.65), 0 0 0 4px rgba(255, 255, 255, 0.14);
-            animation: pulseBounce 2s infinite;
-        }
-
-        @keyframes pulseBounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.06); }
-        }
-
-        /* Modal Tetapan Gambar & Modal Bebong */
-        .custom-modal {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-        }
-
-        .custom-modal.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .custom-modal .modal-box {
-            transform: scale(0.85) translateY(25px);
-            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .custom-modal.open .modal-box {
-            transform: scale(1) translateY(0);
-        }
-
-        /* Konfeti / Hati Terbang */
-        .confetti-piece {
-            position: fixed;
-            z-index: 100;
-            pointer-events: none;
-            animation: confettiFall 3s ease-out forwards;
-        }
-
-        @keyframes confettiFall {
-            0% { transform: translateY(-20px) rotate(0deg) scale(1); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(720deg) scale(0.5); opacity: 0; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Latar Belakang Ambien & Zarah Cahaya -->
-    <div class="ambient-bg"></div>
-    <div id="particles-container"></div>
-
-    <!-- Zon Rahsia Ketik 2 Kali di Penjuru Kiri Atas (Untuk buka semula Tetapan Gambar jika sudah dikunci) -->
-    <div id="secret-corner" title="Ketik 2 kali untuk tetapan gambar" 
-         class="fixed top-0 left-0 w-16 h-16 z-50 cursor-pointer"></div>
-
-    <!-- Butang Tetapan Gambar di Penjuru Kanan Atas (Akan hilang bila Mod Kejutan dikunci) -->
-    <button id="open-setup-btn" onclick="openSetupModal()" 
-            class="fixed top-3.5 right-3.5 z-50 px-3.5 py-2 rounded-full text-xs font-bold bg-pink-600/80 hover:bg-pink-500 backdrop-blur-md border border-pink-300/40 text-white transition flex items-center gap-1.5 shadow-[0_0_20px_rgba(255,0,127,0.5)]">
-        <span>📷</span>
-        <span>Tetapan Gambar</span>
-    </button>
-
-    <!-- Input Fail Tersembunyi untuk Galeri Telefon -->
-    <input type="file" id="wife-file-input" accept="image/*" class="hidden" onchange="handleImageUpload(event, 'wife')">
-    <input type="file" id="kid-file-input" accept="image/*" class="hidden" onchange="handleImageUpload(event, 'kid')">
-
-    <!-- =================================================================
-         HALAMAN 1: KACA LOVE NEON PINK & LERET UNTUK MEMBUKA
-         ================================================================= -->
-    <section id="page-1">
-        <div class="text-center mb-5">
-            <p class="text-pink-300/90 text-xs uppercase tracking-[0.25em] font-bold mb-1">
-                Khas Buat Isteriku Tercinta
-            </p>
-            <h1 class="font-serif-romantic text-3xl sm:text-4xl text-white font-bold tracking-wide drop-shadow-[0_0_15px_rgba(255,0,127,0.75)]">
-                NURUL EZLYNN
-            </h1>
-        </div>
-
-        <!-- Bentuk Kaca Love Berisi Air Neon Pink -->
-        <div id="glass-heart-box" class="glass-heart-container my-2">
-            <svg viewBox="0 0 220 200" class="w-full h-full overflow-visible">
-                <defs>
-                    <!-- Laluan Bentuk Hati -->
-                    <path id="heart-shape" d="M110,182 C110,182 18,124 18,62 C18,30 43,10 71,10 C89,10 103,20 110,33 C117,20 131,10 149,10 C177,10 202,30 202,62 C202,124 110,182 110,182 Z" />
-
-                    <!-- Clip Path supaya air kekal di dalam kaca hati -->
-                    <clipPath id="heart-clip">
-                        <use href="#heart-shape" />
-                    </clipPath>
-
-                    <!-- Gradien Cecair Neon Pink -->
-                    <linearGradient id="neon-liquid-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#ff4da6" />
-                        <stop offset="45%" stop-color="#ff007f" />
-                        <stop offset="100%" stop-color="#b30059" />
-                    </linearGradient>
-
-                    <!-- Gradien Kilauan Kaca (Glassmorphism Rim) -->
-                    <linearGradient id="glass-shine" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="rgba(255, 255, 255, 0.65)" />
-                        <stop offset="35%" stop-color="rgba(255, 255, 255, 0.12)" />
-                        <stop offset="70%" stop-color="rgba(255, 133, 192, 0.1)" />
-                        <stop offset="100%" stop-color="rgba(255, 255, 255, 0.45)" />
-                    </linearGradient>
-                </defs>
-
-                <!-- Latar Belakang Kaca Lutsinar -->
-                <use href="#heart-shape" fill="rgba(255, 255, 255, 0.06)" />
-
-                <!-- Kumpulan Cecair Neon Pink di dalam Kaca (Bermula pada paras 15% = Y:165) -->
-                <g clip-path="url(#heart-clip)">
-                    <g id="liquid-level-group" transform="translate(0, 165)">
-                        <!-- Ombak Belakang -->
-                        <path class="liquid-wave-2" fill="#ff66b2" 
-                              d="M-50,0 Q-25,-10 0,0 T50,0 T100,0 T150,0 T200,0 T250,0 T300,0 L300,220 L-50,220 Z" />
-                        <!-- Ombak Utama Neon Pink -->
-                        <path class="liquid-wave-1" fill="url(#neon-liquid-grad)" 
-                              d="M-50,2 Q-25,11 0,2 T50,2 T100,2 T150,2 T200,2 T250,2 T300,2 L300,220 L-50,220 Z" />
-                        
-                        <!-- Buih-buih Bercahaya dalam Air -->
-                        <circle cx="75" cy="35" r="3" fill="#ffb3d9" class="bubble" style="animation-delay: 0.2s;" />
-                        <circle cx="115" cy="55" r="4" fill="#ffffff" class="bubble" style="animation-delay: 0.9s;" />
-                        <circle cx="145" cy="30" r="2.5" fill="#ffb3d9" class="bubble" style="animation-delay: 1.5s;" />
-                        <circle cx="95" cy="70" r="3.5" fill="#ffd6eb" class="bubble" style="animation-delay: 2.1s;" />
-                    </g>
-                </g>
-
-                <!-- Bingkai Kaca & Pantulan Cahaya -->
-                <use href="#heart-shape" fill="none" stroke="url(#glass-shine)" stroke-width="4.5" />
-                <use href="#heart-shape" fill="none" stroke="rgba(255, 77, 166, 0.55)" stroke-width="1.5" />
-
-                <!-- Pantulan Cahaya Kaca Melengkung di Kiri Atas -->
-                <path d="M40,58 C40,38 55,24 73,24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="4" stroke-linecap="round" />
-                <circle cx="38" cy="70" r="2.5" fill="rgba(255,255,255,0.7)" />
-            </svg>
-
-            <!-- Peratusan Pengisian Cinta -->
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none pt-2">
-                <span id="fill-percentage" class="text-2xl font-extrabold tracking-wider text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
-                    15%
-                </span>
-            </div>
-        </div>
-
-        <p class="text-pink-200/80 text-xs mb-6 text-center max-w-xs">
-            Penuhkan air cinta dalam kaca hati ini sehingga 100% untuk membuka kejutan...
-        </p>
-
-        <!-- Komponen Butang Leret (Slide to Unlock) -->
-        <div id="slider-track" class="slider-track">
-            <div id="slider-fill" class="slider-fill"></div>
-            <div id="slider-text" class="slider-text">LERET UNTUK MEMBUKA</div>
-            <div id="slider-thumb" class="slider-thumb" role="slider" aria-label="Leret untuk membuka" tabindex="0">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <!-- =================================================================
-         HALAMAN 2: UCAPAN SWEET UNTUK NURUL EZLYNN & KEJUTAN BEBONG
-         ================================================================= -->
-    <main id="page-2" class="relative z-20 px-4 pt-12 max-w-lg mx-auto">
-        
-        <!-- Kad Utama Isteri (Nurul Ezlynn) -->
-        <div class="romantic-card rounded-3xl p-6 sm:p-8 text-center relative overflow-hidden">
-            <div class="absolute -top-20 -left-20 w-44 h-44 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="absolute -bottom-20 -right-20 w-44 h-44 bg-rose-500/20 rounded-full blur-3xl pointer-events-none"></div>
-
-            <span class="inline-block px-3.5 py-1 rounded-full bg-pink-500/20 border border-pink-400/35 text-pink-200 text-xs font-bold tracking-wider uppercase mb-3">
-                ✨ Bidadari Syurgaku ✨
-            </span>
-
-            <h2 class="font-serif-romantic text-2xl sm:text-3xl text-white font-bold mb-5 drop-shadow-[0_2px_10px_rgba(255,0,127,0.45)]">
-                Untuk Isteriku, <br>
-                <span class="text-pink-300 text-3xl sm:text-4xl">Nurul Ezlynn ❤️</span>
-            </h2>
-
-            <!-- Bingkai Gambar Nurul Ezlynn -->
-            <div class="photo-frame w-56 h-64 sm:w-64 sm:h-72 mx-auto mb-6 group">
-                <div class="w-full h-full rounded-[1.2rem] overflow-hidden bg-pink-950 relative">
-                    <img id="wife-photo-display" 
-                         src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80" 
-                         onerror="this.src='https://placehold.co/400x480/2d0a1e/ff85c0?text=Nurul+Ezlynn'"
-                         alt="Nurul Ezlynn" 
-                         class="w-full h-full object-cover object-center transition duration-500 group-hover:scale-105">
-                </div>
-            </div>
-
-            <!-- Caption Paling Sweet -->
-            <p class="font-script text-3xl text-pink-300 mb-2">
-                "Kaulah Segalanya Dalam Hidupku..."
-            </p>
-            <p class="text-pink-100 font-semibold text-sm sm:text-base italic mb-4">
-                "Dari jutaan bintang di langit malam, memiliki dirimu sebagai isteri adalah anugerah terindah yang pernah Tuhan kurniakan buatku."
-            </p>
-
-            <!-- Huraian Menyentuh Hati -->
-            <div class="space-y-3.5 text-sm sm:text-[15px] leading-relaxed text-pink-50/90 text-justify bg-black/25 p-4 sm:p-5 rounded-2xl border border-white/10">
-                <p>
-                    Sayangku <strong class="text-pink-300">Nurul Ezlynn</strong>, terima kasih kerana sentiasa menjadi isteri yang penuh kesabaran, kelembutan, dan kasih sayang yang tidak pernah bertepi. Setiap penat lelahmu menguruskan rumah tangga kita, setiap senyuman manismu, dan setiap doa yang kau titipkan menjadi sumber kekuatan terbesar dalam hidupku.
-                </p>
-                <p>
-                    Maafkan segala kekuranganku jika ada masa aku terleka atau kurang sempurna. Ketahuilah bahawa cintaku padamu tidak pernah berkurang walau sezarah, malah makin mekar setiap hari. Semoga kita terus melangkah seiring hingga ke syurga-Nya. <span class="text-pink-300 font-bold">I love you forever, sayang! 💖</span>
-                </p>
-            </div>
-
-            <!-- Amaran Jangan Scroll Bawah -->
-            <div class="mt-8 pt-5 border-t border-pink-400/25 flex flex-col items-center">
-                <p class="text-amber-300 text-xs sm:text-sm font-extrabold tracking-wide flex items-center gap-1.5 animate-bounce">
-                    <span>⚠️</span>
-                    <span>Amaran: Jangan scroll bawah...</span>
-                </p>
-                <svg class="w-5 h-5 text-pink-300/75 mt-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </div>
-        </div>
-
-        <!-- Bahagian Skrol Bawah: Butang SAINGAN MU -->
-        <div id="rival-section" class="mt-28 mb-16 flex flex-col items-center justify-center text-center">
-            <div id="rival-btn-wrapper">
-                <p class="text-pink-200/85 text-xs mb-3 font-medium">
-                    Alamak, ter-scroll juga ke? Tengok siapa nak menyibuk ni 👇
-                </p>
-                <button onclick="openBebongModal()" 
-                        class="rival-btn px-8 py-4 rounded-full text-white font-extrabold text-base sm:text-lg tracking-wider uppercase flex items-center gap-3 mx-auto cursor-pointer">
-                    <span>SAINGAN MU 👀</span>
-                </button>
-            </div>
-        </div>
-    </main>
-
-    <!-- =================================================================
-         MODAL KEJUTAN ANAK: BEBONG ("SAINGAN MU")
-         ================================================================= -->
-    <div id="bebong-modal" class="custom-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
-        <div class="modal-box romantic-card w-full max-w-md rounded-3xl p-6 sm:p-7 text-center relative border-2 border-pink-400/55">
-            
-            <!-- Butang Tutup -->
-            <button onclick="closeBebongModal()" 
-                    class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-pink-200 text-sm font-bold transition">
-                ✕
-            </button>
-
-            <div class="inline-block px-3.5 py-1 rounded-full bg-amber-400/20 border border-amber-300/45 text-amber-200 text-xs font-extrabold mb-3">
-                👑 VIP SEBENAR DALAM RUMAH 👑
-            </div>
-
-            <!-- Bingkai Gambar Bebong -->
-            <div class="photo-frame w-48 h-48 sm:w-52 sm:h-52 mx-auto mb-4 rounded-full p-1.5">
-                <div class="w-full h-full rounded-full overflow-hidden bg-pink-950 relative">
-                    <img id="kid-photo-display" 
-                         src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=500&q=80" 
-                         onerror="this.src='https://placehold.co/400x400/3b0d26/ffb3d9?text=BEBONG'"
-                         alt="Bebong" 
-                         class="w-full h-full object-cover object-center">
-                </div>
-            </div>
-
-            <h3 class="font-serif-romantic text-2xl sm:text-3xl text-amber-300 font-bold mb-1">
-                Perkenalkan: BEBONG! 😜
-            </h3>
-            <p class="text-pink-300 text-xs font-bold uppercase tracking-widest mb-3">
-                Pencabar No. 1 Hati Papa
-            </p>
-
-            <!-- Caption Lucu dari Bebong kepada Mamak (Nurul Ezlynn) -->
-            <div class="bg-white/10 rounded-2xl p-4 text-left border border-pink-300/25 space-y-2.5 text-sm text-pink-50">
-                <p class="font-bold text-pink-300 text-center text-base">
-                    "Mamak jangan perasan sweet sorang-sorang ya! 😂"
-                </p>
-                <p>
-                    Hai Mamak <strong class="text-amber-300">Nurul Ezlynn</strong>! Ini <strong class="text-amber-300">Bebong</strong> ni! Walaupun Papa kata Mamak bidadari dia, tapi kalau Bebong kenyit mata sikit je, terus Papa lupa dunia tau! 🍼✨
-                </p>
-                <p>
-                    Apapun, terima kasih Mamak sebab selalu layan kerenah Bebong siang malam. <strong class="text-pink-300">Sayang Mamak ketat-ketat!</strong> (P/S: Nanti jangan lupa belikan jajan & susu Bebong ya Mamak 😘💖)
-                </p>
-            </div>
-
-            <button onclick="closeBebongModal()" 
-                    class="mt-5 w-full py-3.5 rounded-2xl bg-gradient-to-r from-pink-600 to-rose-500 hover:from-pink-500 hover:to-rose-400 text-white font-extrabold text-sm shadow-lg transition">
-                Haha, Sayang Mamak & Bebong! ❤️
-            </button>
-        </div>
-    </div>
-
-    <!-- =================================================================
-         MODAL TETAPAN GAMBAR & MOD KEJUTAN (UNTUK SUAMI SEBELUM BAGI ISTERI)
-         ================================================================= -->
-    <div id="setup-modal" class="custom-modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-lg">
-        <div class="modal-box romantic-card w-full max-w-md rounded-3xl p-6 text-center relative border border-pink-400/40">
-            
-            <button onclick="closeSetupModal()" 
-                    class="absolute top-3.5 right-3.5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-pink-200 text-sm font-bold">
-                ✕
-            </button>
-
-            <h3 class="text-xl font-extrabold text-white mb-1">📷 Tetapan Gambar Kejutan</h3>
-            <p class="text-pink-200/75 text-xs mb-5">
-                Pilih gambar dari galeri telefon anda. Gambar akan disimpan secara automatik.
-            </p>
-
-            <div class="grid grid-cols-2 gap-4 mb-6">
-                <!-- Kotak Muat Naik Gambar Isteri -->
-                <div class="bg-white/5 border border-pink-400/25 rounded-2xl p-3 flex flex-col items-center">
-                    <div class="w-24 h-24 rounded-xl overflow-hidden mb-2.5 border border-pink-400/40">
-                        <img id="preview-wife" 
-                             src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=300&q=80" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-xs font-bold text-pink-200 mb-2">Nurul Ezlynn</p>
-                    <button onclick="document.getElementById('wife-file-input').click()" 
-                            class="w-full py-2 px-2 rounded-xl bg-pink-600 hover:bg-pink-500 text-white text-xs font-bold transition">
-                        Pilih Gambar
-                    </button>
-                </div>
-
-                <!-- Kotak Muat Naik Gambar Bebong -->
-                <div class="bg-white/5 border border-pink-400/25 rounded-2xl p-3 flex flex-col items-center">
-                    <div class="w-24 h-24 rounded-full overflow-hidden mb-2.5 border border-amber-400/50">
-                        <img id="preview-kid" 
-                             src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=300&q=80" 
-                             class="w-full h-full object-cover">
-                    </div>
-                    <p class="text-xs font-bold text-amber-200 mb-2">Bebong</p>
-                    <button onclick="document.getElementById('kid-file-input').click()" 
-                            class="w-full py-2 px-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold transition">
-                        Pilih Gambar
-                    </button>
-                </div>
-            </div>
-
-            <!-- Butang Kunci & Mulakan Kejutan -->
-            <button onclick="lockAndStartSurprise()" 
-                    class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-pink-600 via-rose-500 to-pink-600 text-white font-extrabold text-sm shadow-[0_0_25px_rgba(255,0,127,0.6)] transition mb-2">
-                🔒 Kunci & Mulakan Kejutan
-            </button>
-            <p class="text-[11px] text-pink-200/60">
-                *Butang tetapan akan disembunyikan supaya kejutan nampak kemas. (Ketik 2 kali di penjuru kiri atas untuk buka semula).
-            </p>
-        </div>
-    </div>
-
-    <script>
-        /* =============================================================
-           1. PENJANA ZARAH CAHAYA LATAR BELAKANG
-           ============================================================= */
-        function createParticles() {
-            const container = document.getElementById('particles-container');
-            for (let i = 0; i < 18; i++) {
-                const p = document.createElement('div');
-                p.className = 'particle';
-                const size = Math.random() * 14 + 6;
-                p.style.width = `${size}px`;
-                p.style.height = `${size}px`;
-                p.style.left = `${Math.random() * 100}vw`;
-                p.style.animationDuration = `${Math.random() * 8 + 7}s`;
-                p.style.animationDelay = `${Math.random() * 5}s`;
-                container.appendChild(p);
-            }
-        }
-        createParticles();
-
-        /* =============================================================
-           2. PENGURUSAN GAMBAR & LOCALSTORAGE (NURUL EZLYNN & BEBONG)
-           ============================================================= */
-        const STORAGE_WIFE_KEY = 'kejutan_ezlynn_wife_img';
-        const STORAGE_KID_KEY = 'kejutan_ezlynn_kid_img';
-        const STORAGE_LOCKED_KEY = 'kejutan_ezlynn_locked';
-
-        function loadSavedPhotos() {
-            try {
-                const savedWife = localStorage.getItem(STORAGE_WIFE_KEY);
-                const savedKid = localStorage.getItem(STORAGE_KID_KEY);
-                const isLocked = localStorage.getItem(STORAGE_LOCKED_KEY) === 'true';
-
-                if (savedWife) {
-                    document.getElementById('wife-photo-display').src = savedWife;
-                    document.getElementById('preview-wife').src = savedWife;
-                }
-                if (savedKid) {
-                    document.getElementById('kid-photo-display').src = savedKid;
-                    document.getElementById('preview-kid').src = savedKid;
-                }
-                if (isLocked) {
-                    document.getElementById('open-setup-btn').classList.add('hidden');
-                }
-            } catch (e) {
-                console.warn('LocalStorage tidak tersedia:', e);
-            }
-        }
-
-        // Mampatkan gambar supaya muat dengan lancar dalam localStorage telefon
-        function handleImageUpload(event, type) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    const maxDim = 800;
-                    let width = img.width;
-                    let height = img.height;
-
-                    if (width > height) {
-                        if (width > maxDim) {
-                            height *= maxDim / width;
-                            width = maxDim;
-                        }
-                    } else {
-                        if (height > maxDim) {
-                            width *= maxDim / height;
-                            height = maxDim;
-                        }
-                    }
-
-                    canvas.width = width;
-                    canvas.height = height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, width, height);
-
-                    const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.82);
-
-                    if (type === 'wife') {
-                        document.getElementById('wife-photo-display').src = compressedDataUrl;
-                        document.getElementById('preview-wife').src = compressedDataUrl;
-                        try { localStorage.setItem(STORAGE_WIFE_KEY, compressedDataUrl); } catch (err) {}
-                    } else {
-                        document.getElementById('kid-photo-display').src = compressedDataUrl;
-                        document.getElementById('preview-kid').src = compressedDataUrl;
-                        try { localStorage.setItem(STORAGE_KID_KEY, compressedDataUrl); } catch (err) {}
-                    }
-                };
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-
-        function openSetupModal() {
-            document.getElementById('setup-modal').classList.add('open');
-        }
-
-        function closeSetupModal() {
-            document.getElementById('setup-modal').classList.remove('open');
-        }
-
-        function lockAndStartSurprise() {
-            closeSetupModal();
-            document.getElementById('open-setup-btn').classList.add('hidden');
-            try { localStorage.setItem(STORAGE_LOCKED_KEY, 'true'); } catch (e) {}
-            resetToPage1();
-        }
-
-        // Ketik 2 kali di penjuru kiri atas untuk buka semula tetapan gambar
-        let lastTapTime = 0;
-        document.getElementById('secret-corner').addEventListener('click', () => {
-            const now = Date.now();
-            if (now - lastTapTime < 400) {
-                document.getElementById('open-setup-btn').classList.remove('hidden');
-                try { localStorage.setItem(STORAGE_LOCKED_KEY, 'false'); } catch (e) {}
-                openSetupModal();
-            }
-            lastTapTime = now;
-        });
-
-        /* =============================================================
-           3. LOGIK BUTANG LERET & AIR KACA LOVE NEON PINK (15% -> 100%)
-           ============================================================= */
-        const sliderTrack = document.getElementById('slider-track');
-        const sliderThumb = document.getElementById('slider-thumb');
-        const sliderFill = document.getElementById('slider-fill');
-        const sliderText = document.getElementById('slider-text');
-        const liquidGroup = document.getElementById('liquid-level-group');
-        const fillPercentage = document.getElementById('fill-percentage');
-        const glassHeartBox = document.getElementById('glass-heart-box');
-        const page1 = document.getElementById('page-1');
-        const page2 = document.getElementById('page-2');
-
-        let isDragging = false;
-        let isUnlocked = false;
-        let startX = 0;
-        let currentTranslate = 0;
-
-        function getMaxSlide() {
-            return sliderTrack.clientWidth - sliderThumb.clientWidth - 10;
-        }
-
-        // Paras air bermula dari 15% hingga 100%
-        function updateHeartLiquid(progress) {
-            const clamped = Math.max(0, Math.min(1, progress));
-            const displayPercent = Math.round(15 + (clamped * 85)); // 15% hingga 100%
-            
-            // Y=165 adalah 15%, Y=0 adalah 100%
-            const yOffset = 165 * (1 - clamped);
-            liquidGroup.setAttribute('transform', `translate(0, ${yOffset})`);
-            fillPercentage.textContent = `${displayPercent}%`;
-
-            const maxSlide = getMaxSlide();
-            const thumbX = clamped * maxSlide;
-            sliderThumb.style.transform = `translateX(${thumbX}px)`;
-            sliderFill.style.width = `${thumbX + sliderThumb.clientWidth / 2}px`;
-            sliderText.style.opacity = Math.max(0, 1 - clamped * 1.6);
-
-            if (clamped > 0.85) {
-                glassHeartBox.classList.add('full-glow');
-            } else {
-                glassHeartBox.classList.remove('full-glow');
-            }
-        }
-
-        function resetToPage1() {
-            isUnlocked = false;
-            isDragging = false;
-            currentTranslate = 0;
-            page1.classList.remove('blur-unlock');
-            page2.classList.remove('revealed');
-            document.getElementById('rival-btn-wrapper').classList.remove('visible');
-            updateHeartLiquid(0);
-            window.scrollTo({ top: 0, behavior: 'instant' });
-        }
-
-        function startDrag(clientX) {
-            if (isUnlocked) return;
-            isDragging = true;
-            startX = clientX - currentTranslate;
-            sliderThumb.style.transition = 'none';
-            sliderFill.style.transition = 'none';
-        }
-
-        function onDrag(clientX) {
-            if (!isDragging || isUnlocked) return;
-            const maxSlide = getMaxSlide();
-            let newX = clientX - startX;
-            newX = Math.max(0, Math.min(newX, maxSlide));
-            currentTranslate = newX;
-
-            const progress = newX / maxSlide;
-            updateHeartLiquid(progress);
-
-            if (progress >= 0.96) {
-                completeUnlock();
-            }
-        }
-
-        function endDrag() {
-            if (!isDragging || isUnlocked) return;
-            isDragging = false;
-
-            const maxSlide = getMaxSlide();
-            const progress = currentTranslate / maxSlide;
-
-            if (progress >= 0.92) {
-                completeUnlock();
-            } else {
-                sliderThumb.style.transition = 'transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)';
-                sliderFill.style.transition = 'width 0.45s cubic-bezier(0.22, 1, 0.36, 1)';
-                
-                const startProg = progress;
-                const startTime = performance.now();
-                const duration = 450;
-
-                function animateReset(now) {
-                    if (isDragging || isUnlocked) return;
-                    const elapsed = now - startTime;
-                    const t = Math.min(1, elapsed / duration);
-                    const easeOut = 1 - Math.pow(1 - t, 3);
-                    const currentProg = startProg * (1 - easeOut);
-                    currentTranslate = currentProg * maxSlide;
-                    updateHeartLiquid(currentProg);
-
-                    if (t < 1) {
-                        requestAnimationFrame(animateReset);
-                    }
-                }
-                requestAnimationFrame(animateReset);
-            }
-        }
-
-        function completeUnlock() {
-            if (isUnlocked) return;
-            isUnlocked = true;
-            isDragging = false;
-
-            updateHeartLiquid(1);
-            glassHeartBox.classList.add('full-glow');
-            playRomanticChime();
-
-            setTimeout(() => {
-                page1.classList.add('blur-unlock');
-                page2.classList.add('revealed');
-                window.scrollTo({ top: 0, behavior: 'instant' });
-                spawnHeartsBurst(22);
-            }, 450);
-        }
-
-        // Sentuhan & Tetikus
-        sliderThumb.addEventListener('touchstart', (e) => startDrag(e.touches[0].clientX), { passive: true });
-        window.addEventListener('touchmove', (e) => {
-            if (isDragging) onDrag(e.touches[0].clientX);
-        }, { passive: true });
-        window.addEventListener('touchend', endDrag);
-
-        sliderThumb.addEventListener('mousedown', (e) => startDrag(e.clientX));
-        window.addEventListener('mousemove', (e) => {
-            if (isDragging) onDrag(e.clientX);
-        });
-        window.addEventListener('mouseup', endDrag);
-
-        /* =============================================================
-           4. KESAN SKROL BAWAH -> TIMBUL BUTANG "SAINGAN MU"
-           ============================================================= */
-        const rivalBtnWrapper = document.getElementById('rival-btn-wrapper');
-
-        window.addEventListener('scroll', () => {
-            if (!isUnlocked) return;
-            if (window.scrollY > 130) {
-                rivalBtnWrapper.classList.add('visible');
-            }
-        }, { passive: true });
-
-        /* =============================================================
-           5. MODAL KEJUTAN BEBONG & KONFETI
-           ============================================================= */
-        const bebongModal = document.getElementById('bebong-modal');
-
-        function openBebongModal() {
-            bebongModal.classList.add('open');
-            spawnHeartsBurst(32);
-            playFunPopSound();
-        }
-
-        function closeBebongModal() {
-            bebongModal.classList.remove('open');
-        }
-
-        function spawnHeartsBurst(amount) {
-            const emojis = ['💖', '💕', '🌸', '✨', '👑', '🍼', '😍'];
-            for (let i = 0; i < amount; i++) {
-                const el = document.createElement('div');
-                el.className = 'confetti-piece text-xl sm:text-2xl';
-                el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-                el.style.left = `${Math.random() * 95}vw`;
-                el.style.top = `-30px`;
-                el.style.animationDuration = `${Math.random() * 2 + 2}s`;
-                el.style.animationDelay = `${Math.random() * 0.4}s`;
-                document.body.appendChild(el);
-                setTimeout(() => el.remove(), 4500);
-            }
-        }
-
-        /* =============================================================
-           6. KESAN BUNYI LEMBUT (WEB AUDIO API)
-           ============================================================= */
-        function playRomanticChime() {
-            try {
-                const ctx = new (window.AudioContext || window.webkitAudioContext)();
-                const notes = [523.25, 659.25, 783.99, 1046.50];
-                notes.forEach((freq, idx) => {
-                    const osc = ctx.createOscillator();
-                    const gain = ctx.createGain();
-                    osc.type = 'sine';
-                    osc.frequency.setValueAtTime(freq, ctx.currentTime + idx * 0.12);
-                    gain.gain.setValueAtTime(0.08, ctx.currentTime + idx * 0.12);
-                    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + idx * 0.12 + 0.8);
-                    osc.connect(gain);
-                    gain.connect(ctx.destination);
-                    osc.start(ctx.currentTime + idx * 0.12);
-                    osc.stop(ctx.currentTime + idx * 0.12 + 0.85);
-                });
-            } catch (e) {}
-        }
-
-        function playFunPopSound() {
-            try {
-                const ctx = new (window.AudioContext || window.webkitAudioContext)();
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(350, ctx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.18);
-                gain.gain.setValueAtTime(0.12, ctx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start();
-                osc.stop(ctx.currentTime + 0.26);
-            } catch (e) {}
-        }
-
-        // Muatkan gambar yang disimpan semasa halaman dibuka
-        loadSavedPhotos();
-    </script>
-</body>
-</html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Kejutan Cinta Untuk Nurul Ezlynn</title>
+  <style>
+    :root {
+      --neon-pink: #ff1e8a;
+      --neon-pink-soft: #ff6ec4;
+      --neon-glow: 0 0 18px rgba(255, 30, 138, 0.85), 0 0 42px rgba(255, 30, 138, 0.55);
+      --bg-dark: #09050d;
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.28);
+      --text-main: #ffffff;
+      --text-muted: #f3d6e8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #24091d 0%, var(--bg-dark) 70%);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ================= HALAMAN 1: KACA HATI NEON PINK ================= */
+    #page1 {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 22px 32px;
+      background: radial-gradient(circle at 50% 30%, rgba(255, 30, 138, 0.16), transparent 60%), var(--bg-dark);
+      transition: filter 0.85s ease, opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    #page1.blur-exit {
+      filter: blur(26px);
+      opacity: 0;
+      transform: scale(1.08);
+      pointer-events: none;
+    }
+
+    .top-badge {
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--neon-pink-soft);
+      background: rgba(255, 30, 138, 0.12);
+      border: 1px solid rgba(255, 30, 138, 0.35);
+      padding: 7px 16px;
+      border-radius: 999px;
+      box-shadow: 0 0 16px rgba(255, 30, 138, 0.25);
+    }
+
+    .heart-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: auto 0;
+    }
+
+    .heart-glass-wrapper {
+      position: relative;
+      width: 240px;
+      height: 225px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 0 24px rgba(255, 30, 138, 0.45));
+    }
+
+    .heart-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .heart-glass-shell {
+      fill: rgba(255, 255, 255, 0.06);
+      stroke: rgba(255, 255, 255, 0.55);
+      stroke-width: 2.5;
+    }
+
+    .heart-glass-highlight {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.38);
+      stroke-width: 2;
+      stroke-linecap: round;
+    }
+
+    .neon-water-rect {
+      fill: url(#neonPinkGrad);
+      transition: y 0.08s linear;
+    }
+
+    .water-wave-line {
+      stroke: #ff9be2;
+      stroke-width: 2.2;
+      fill: none;
+      opacity: 0.85;
+    }
+
+    .fill-percent {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: var(--neon-glow);
+      letter-spacing: 1px;
+    }
+
+    .hint-text {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 290px;
+      line-height: 1.45;
+    }
+
+    /* Butang Leret Untuk Membuka */
+    .slider-container {
+      width: 100%;
+      max-width: 360px;
+      height: 62px;
+      background: var(--glass-bg);
+      border: 1.5px solid var(--glass-border);
+      border-radius: 999px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      backdrop-filter: blur(14px);
+      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.05), 0 10px 28px rgba(0, 0, 0, 0.45);
+      user-select: none;
+      touch-action: none;
+    }
+
+    .slider-progress {
+      position: absolute;
+      left: 0;
